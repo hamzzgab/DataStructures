@@ -3,15 +3,15 @@ package com.company.stack;
 import java.util.Scanner;
 
 class Stack {
-    final int MAX = 5;
+    final int MAX = 50;
     int top = -1;
-    int[] arr = new int[MAX];
+    char[] arr = new char[MAX];
 
     void print(String str){
         System.out.println(str);
     }
 
-    void push(int val){
+    void push(char val){
         if (isFull()){
             print("Overflow");
         }else {
@@ -20,13 +20,15 @@ class Stack {
         }
     }
 
-    void pop(){
+    char pop(){
+        char val = 0;
         if (isEmpty()){
             print("Underflow");
         }else {
+            val = arr[top];
             top = top - 1;
-            display();
         }
+        return val;
     }
 
     void peek(){
@@ -51,8 +53,9 @@ class Stack {
         if (isEmpty()){
             print("Underflow");
         }else{
+            System.out.println("\n");
             for (int i=0; i<=top; i++){
-                System.out.println("\n[" + i + "] - " + arr[i]);
+                System.out.println("[" + i + "] - " + arr[i]);
             }
         }
     }
@@ -67,9 +70,9 @@ class Stack {
             choice = sc.nextInt();
             switch (choice){
                 case 1:
-                    int val = 0;
-                    System.out.println("Enter integer to be pushed");
-                    val = sc.nextInt();
+                    char val;
+                    System.out.println("Enter char to be pushed");
+                    val = sc.next().charAt(0);
                     s.push(val);
                     break;
                 case 2:
@@ -81,6 +84,8 @@ class Stack {
                 case 4:
                     s.display();
                     break;
+                case 5:
+                    s.print("Bye...");
                 default:
                     s.print("Enter from the choices only");
                     break;
