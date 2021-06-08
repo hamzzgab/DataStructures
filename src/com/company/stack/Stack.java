@@ -3,15 +3,24 @@ package com.company.stack;
 import java.util.Scanner;
 
 class Stack {
-    final int MAX = 50;
+    final int MAX = 10;
     int top = -1;
+    char val = 0;
     char[] arr = new char[MAX];
 
     void print(String str){
         System.out.println(str);
     }
 
-    void push(char val){
+    void peek() {
+        if (isEmpty()) {
+            print("Underflow");
+        }else {
+            System.out.println(arr[top]);
+        }
+    }
+
+    void push(char val) {
         if (isFull()){
             print("Overflow");
         }else {
@@ -20,9 +29,8 @@ class Stack {
         }
     }
 
-    char pop(){
-        char val = 0;
-        if (isEmpty()){
+    char pop() {
+        if (isEmpty()) {
             print("Underflow");
         }else {
             val = arr[top];
@@ -31,22 +39,18 @@ class Stack {
         return val;
     }
 
-    void peek(){
-        if (isEmpty()){
-            print("Underflow");
-        } else System.out.println("["+top+"] - "+arr[top]);
-    }
-
-    boolean isEmpty(){
+    boolean isEmpty() {
         if (top == -1){
             return true;
-        }else return false;
+        }
+        return false;
     }
 
-    boolean isFull(){
-        if (top == MAX-1){
+    boolean isFull() {
+        if (top == MAX - 1){
             return true;
-        }else return false;
+        }
+        return false;
     }
 
     void display(){
