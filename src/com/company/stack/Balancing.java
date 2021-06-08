@@ -1,23 +1,31 @@
 package com.company.stack;
 
-public class Balancing{
-    static String string_exp = "{()}";
-    final int MAX=string_exp.length();
-    int top = -1;
-    char[] arr = new char[MAX];
+class Balancing{
     char val;
-
-    void print(String str){
-        System.out.println(str);
-    }
+    int top = -1;
+    final int MAX = 10;
+    char[] arr = new char[MAX];
 
     void push(char val){
-        if (isFull()){
-            print("Overflow");
-        }else {
+        if (!isFull()){
             top = top + 1;
             arr[top] = val;
         }
+    }
+
+    char pop(){
+        if (!isEmpty()){
+            val = arr[top];
+            top--;
+            return val;
+        }
+        return 0;
+    }
+
+    boolean isEmpty(){
+        if (top == -1){
+            return true;
+        }else return false;
     }
 
     boolean isFull(){
@@ -26,63 +34,50 @@ public class Balancing{
         }else return false;
     }
 
-
-    boolean isEmpty(){
-        if (top == -1){
-            return true;
-        }else return false;
-    }
-
-    char pop(){
-        if (!isEmpty()){
-            val = arr[top];
-            top = top - 1;
-            return val;
-        }
-        return 0;
-    }
-
     boolean check_balance(String exp){
-       for (int i = 0; i < exp.length(); i++){
+        for (int i = 0; i<exp.length(); i++) {
+            char c = exp.charAt(i);
+            if (c == 'C' || c == '{' || c == '['){
+                push(c);
+                continue;
+            }
 
-           char c = exp.charAt(i);
-
-           if (c == '{' || c == '(' || c == '['){
-               push(c);
-           }
-
-           if(isEmpty()) {
-               return false;
-           }else{
-               char check;
-               switch (c) {
-                   case '}':
-                       check = pop();
-                       if (check == '[' || check == '(') {
-                           return false;
-                       }
-                   case ')':
-                       check = pop();
-                       if (check == '{' || check == '[') {
-                           return false;
-                       }
-                   case ']':
-                       check = pop();
-                       if (check == '{' || check == '(') {
-                           return false;
-                       }
-               }
-           }
-       }
+            if (isEmpty()){
+                return false;
+            }
+            char check;
+            switch (c) {
+                case ')':
+                    check = pop();
+                    if (check == '{' || check == '[') {
+                        return false;
+                    }
+                    break;
+                case '}':
+                    check = pop();
+                    if (check == '(' || check == '[') {
+                        return false;
+                    }
+                    break;
+                case ']':
+                    check = pop();
+                    if (check == '{' || check == '(') {
+                        return false;
+                    }
+                    break;
+            }
+        }
         return isEmpty();
     }
 
     public static void main(String[] args){
+        String string_exp = "([{}])";
+        Balancing b = new Balancing();
 
-        Balancing s = new Balancing();
-
-        if (s.check_balance(string_exp)){
-            s.print("\nBalanced");
-        }else s.print("\nUnbalanced");
+        if (b.check_balance(string_exp)){
+            System.out.println("Balanced");
+        }else{
+            System.out.println("UnBalanced");
+        }
     }
 }
