@@ -19,6 +19,21 @@ else
 
 queue[rear] = val
 ```
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|12|13|22|
+
+- After enqueuing `val = 35`
+- `front = 0`
+- `rear = 3`
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|12|13|22|35|
+||:point_up_2:|||:point_up_2:|
+||_front_|||_rear_|
+
 ### 2. dequeue()
 ```
 if isEmpty()
@@ -27,6 +42,22 @@ else
  popped_val = queue[front]
  front++
 ```
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|12|13|22|
+
+- After dequeuing
+- `front = 1`
+- `rear = 3`
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack||13|22|
+|||:point_up_2:|:point_up_2:|
+|||_front_|_rear_|
+
+
 ### 3. display()
 ```
 if isEmpty()
