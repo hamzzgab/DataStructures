@@ -1,6 +1,7 @@
 # DataStructures :🗃️
  
-## [Stack 🗄️ (LIFO)](https://github.com/flyingtatta/DataStructures/tree/main/src/com/company/stack#stack-%EF%B8%8F-lifo)
+## click on the links to redirect you to the README for insight into the DS
+# 1. [Stack 🗄️ (LIFO)](https://github.com/flyingtatta/DataStructures/tree/main/src/com/company/stack#stack-%EF%B8%8F-lifo)
 
 ## Linear Queue 🧑‍🤝‍🧑 (FIFO)
 ### Variables to be declared
