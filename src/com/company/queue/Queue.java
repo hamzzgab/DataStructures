@@ -5,8 +5,13 @@ public class Queue {
 
     int val;
     final int MAX = 5;
-    int front = -1, rear = -1;
+    int front, rear;
     int[] queue = new int[MAX];
+
+    Queue(){
+        front = -1;
+        rear = -1;
+    }
 
     void print(String str){
         System.out.println(str);
@@ -23,16 +28,17 @@ public class Queue {
             rear++;
         }
         queue[rear] = val;
+        display();
     }
 
-    int dequeue(){
+    void dequeue(){
         if (isEmpty()){
             print("Underflow");
         }else{
             val = queue[front];
             front++;
         }
-        return val;
+        display();
     }
 
     void display(){
