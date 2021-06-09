@@ -6,7 +6,7 @@ class Stack {
     final int MAX = 10;
     int top = -1;
     char val = 0;
-    char[] arr = new char[MAX];
+    char[] stack = new char[MAX];
 
     void print(String str){
         System.out.println(str);
@@ -16,7 +16,7 @@ class Stack {
         if (isEmpty()) {
             print("Underflow");
         }else {
-            System.out.println(arr[top]);
+            System.out.println(stack[top]);
         }
     }
 
@@ -25,7 +25,7 @@ class Stack {
             print("Overflow");
         }else {
             top = top + 1;
-            arr[top] = val;
+            stack[top] = val;
         }
     }
 
@@ -33,7 +33,7 @@ class Stack {
         if (isEmpty()) {
             print("Underflow");
         }else {
-            val = arr[top];
+            val = stack[top];
             top = top - 1;
         }
         return val;
@@ -59,7 +59,7 @@ class Stack {
         }else{
             System.out.println("\n");
             for (int i=0; i<=top; i++){
-                System.out.println("[" + i + "] - " + arr[i]);
+                System.out.println("[" + i + "] - " + stack[i]);
             }
         }
     }
