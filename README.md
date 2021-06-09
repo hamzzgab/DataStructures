@@ -1,9 +1,9 @@
 # DataStructures :🗃️
  
-## Stack 🗄️
+## Stack 🗄️ (LIFO)
 ### Variables to be declared
 - `MAX`  a variable to declare the final size of the stack
-- `top` decalres the top most element of the stack initialized to  _-1_
+- `top` decalres the top most element in the stack (initialized to  _-1_)
 - `stack` to store the values
 
 ### Functions
@@ -53,4 +53,9 @@ else
   print stack[i]
 ```
 
-## Linear Queue 🧑‍🤝‍🧑
+## Linear Queue 🧑‍🤝‍🧑 (FIFO)
+### Variables to be declared
+- `MAX`  a variable to declare the final size of the queue
+- `front` decalres the starting element in the queue (initialized to  _-1_)
+- `rear` declares the last element in the queue (initialized to  _-1_)
+- `queue` to store the values
