@@ -81,6 +81,16 @@ if front == -1 OR front > rear
 else
  return false
 ```
+
+- `front == -1`
+
+|Index _-1_|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|||||
+|:point_up_2:|
+|_front_|
+
+
 ### 5. isFull()
 ```
 if rear == MAX - 1
@@ -89,3 +99,11 @@ else
  return false
 ```
 
+- `MAX = 5`
+- `rear = 4`
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|12|13|22|35|45|
+||:point_up_2:||||:point_up_2:|
+||_front_||||_rear_|
