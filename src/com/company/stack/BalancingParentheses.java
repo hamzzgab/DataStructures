@@ -1,6 +1,6 @@
 package com.company.stack;
 
-class Balancing extends Stack{
+class BalancingParentheses extends Stack{
 
     boolean check_balancing(String exp){
         for (int i = 0; i < exp.length(); i++) {
@@ -40,7 +40,7 @@ class Balancing extends Stack{
 
     public static void main(String[] args){
         String string_exp = "[]";
-        Balancing b = new Balancing();
+        BalancingParentheses b = new BalancingParentheses();
 
         if (b.check_balancing(string_exp)) {
             System.out.println("Balanced");
