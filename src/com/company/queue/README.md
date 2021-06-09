@@ -110,11 +110,79 @@ else
 
 
 # Cicular Queue 👌
-
 |Q[7]|Q[0]|Q[1]|
 |---|---|---|
 |Q[6]||Q[2]|
 |Q[5]|Q[4]|Q[3]|
+
+## Variables
+- `MAX`  a variable to declare the final size of the queue
+- `front` decalres the starting element in the queue (initialized to  _-1_)
+- `rear` declares the last element in the queue (initialized to  _-1_)
+- `queue` to store the values
+
+## Functions
+### 1. enqueue(val)
+
+- `front = 0`
+- `rear = 3` 
+
+|||Q[0]|||
+|---|---|---|---|---|
+|||10|||
+|Q[7]|||20|Q[1]|
+|Q[6]|||30|Q[2]|
+|Q[5]|||40|Q[3]|
+||||||
+|||Q[4]|||
+
+- After enqueuing `val = 50`
+- `front = 0`
+- `rear = 4`
+
+|||Q[0]|||
+|---|---|---|---|---|
+|||10|||
+|Q[7]|||20|Q[1]|
+|Q[6]|||30|Q[2]|
+|Q[5]|||40|Q[3]|
+|||50|||
+|||Q[4]|||
+
+
+### 2. dequeue()
+
+- `front = 0`
+- `rear = 3` 
+
+|||Q[0]|||
+|---|---|---|---|---|
+|||10|||
+|Q[7]|||20|Q[1]|
+|Q[6]|||30|Q[2]|
+|Q[5]|||40|Q[3]|
+||||||
+|||Q[4]|||
+
+- After dequeuing
+- `front = 1`
+- `rear = 3`
+
+|||Q[0]|||
+|---|---|---|---|---|
+||||||
+|Q[7]|||20|Q[1]|
+|Q[6]|||30|Q[2]|
+|Q[5]|||40|Q[3]|
+||||||
+|||Q[4]|||
+
+
+
+### 3. display()
+### 4. isEmpty()
+### 5. isFull()
+
 
 
 
