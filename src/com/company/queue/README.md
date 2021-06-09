@@ -66,6 +66,14 @@ else
  for i = front; i <= rear; i++
   print(queue[i])  
 ```
+
+|Index|0|1|2|3|4|
+|---|---|---|---|---|---|
+|Stack|12|13|22|35|45|
+||:point_up_2:||||:point_up_2:|
+||_front_||||_rear_|
+
+
 ### 4. isEmpty()
 ```
 if front == -1 OR front > rear
