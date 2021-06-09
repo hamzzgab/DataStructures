@@ -52,3 +52,5 @@ else
  for i = 0; i<= top; i++
   print stack[i]
 ```
+
+## Linear Queue 🧑‍🤝‍🧑
