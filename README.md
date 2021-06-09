@@ -1,6 +1,6 @@
 # DataStructures :🗃️
  
-## Stack
+## Stack 🗄️
 ### Variables to be declared
 - `MAX`  a variable to declare the final size of the stack
 - `top` decalres the top most element of the stack initialized to  _-1_
