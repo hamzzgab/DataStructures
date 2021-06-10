@@ -163,7 +163,7 @@ else
 |-|:point_up:|-|:point_left:|-|
 |-|-|Q[4]|-|-|
 
-- After dequeuing
+- After de-queuing
 - `front = 1`
 - `rear = 3`
 
@@ -176,7 +176,35 @@ else
 |-|:point_up:|-|:point_left:|-|
 |-|-|Q[4]|-|-|
 
-
 ### 3. display()
+
+1. `rear >= front`
+
+- `rear = 7`
+- `front = 0` 
+
+|-|-|Q[0]|-|-|
+|---|---|---|---|---|
+|-|:point_right:|10|:point_down:|-|
+|Q[7]|80|-|20|Q[1]|
+|Q[6]|70|-|30|Q[2]|
+|Q[5]|60|-|40|Q[3]|
+|-|:point_up:|50|:point_left:|-|
+|-|-|Q[4]|-|-|
+
+- `rear = 0`
+- `front = 0`
+
+|-|-|Q[0]|-|-|
+|---|---|---|---|---|
+|-|:point_right:|10|:point_down:|-|
+|Q[7]|-|-|-|Q[1]|
+|Q[6]|-|-|-|Q[2]|
+|Q[5]|-|-|-|Q[3]|
+|-|:point_up:|-|:point_left:|-|
+|-|-|Q[4]|-|-|
+
+
+
 ### 4. isEmpty()
 ### 5. isFull()
