@@ -8,10 +8,10 @@
 ### 1. push(val)
 ```
 if isFull()
- print Overflow
+    print Overflow
 else 
- top++
- stack[top] = val
+    top++
+    stack[top] = val
 ```
 
 |Index|0|1|2|3|4|
@@ -29,10 +29,10 @@ else
 ### 2. pop()
 ```
 if isEmpty()
- print Underflow
+    print Underflow
 else 
- popped_val = stack[top]
- top--		
+    popped_val = stack[top]
+    top--		
 ```
 
 |Index|0|1|2|3|4|
@@ -50,9 +50,9 @@ else
 ### 3. peek()
 ```
 if isEmpty()
- print Underflow
+    print Underflow
 else 
- return stack[top]
+    return stack[top]
 ```
 
 - `peek = 22`
@@ -65,10 +65,10 @@ else
 ### 4. display()
 ```
 if isEmpty()
- print Underflow
+    print Underflow
 else 
- for i = 0; i<= top; i++
-  print stack[i]
+    for i = 0; i<= top; i++
+        print stack[i]
 ```
 
 |Index|0|1|2|3|4|
@@ -79,9 +79,9 @@ else
 ### 5. isFull()
 ```
 if top == MAX - 1
- return true
+    return true
 else 
- return false
+    return false
 ```
 
 - `MAX = 5`
@@ -95,9 +95,9 @@ else
 ### 6. isEmpty()
 ```
 if top == -1
- return true
+    return true
 else 
- return false
+    return false
 ```
 
 - `top = -1`

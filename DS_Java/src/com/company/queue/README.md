@@ -9,19 +9,20 @@
 ### 1. enqueue(val)
 ```
 if isFull()
- print Overflow
- 
-if front == -1 AND rear == -1
- front = rear = 0
-else 
- rear++
+    print Overflow
 
-queue[rear] = val
+else  
+    if front == -1 AND rear == -1
+        front = rear = 0
+        
+    else 
+        rear++        
+    queue[rear] = val
 ```
 
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack|12|13|22|
+|Queue|12|13|22|
 
 - After enqueuing `val = 35`
 - `front = 0`
@@ -29,30 +30,30 @@ queue[rear] = val
 
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack|12|13|22|35|
+|Queue|12|13|22|35|
 ||:point_up_2:|||:point_up_2:|
 ||_front_|||_rear_|
 
 ### 2. dequeue()
 ```
 if isEmpty()
- print Underflow
+    print Underflow
 else 
- popped_val = queue[front]
- front++
+    popped_val = queue[front]
+    front++
 ```
 
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack|12|13|22|
+|Queue|12|13|22|
 
-- After dequeuing
+- After de-queuing
 - `front = 1`
 - `rear = 3`
 
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack||13|22|
+|Queue||13|22|
 |||:point_up_2:|:point_up_2:|
 |||_front_|_rear_|
 
@@ -60,10 +61,10 @@ else
 ### 3. display()
 ```
 if isEmpty()
- print Underflow
+    print Underflow
 else
- for i = front; i <= rear; i++
-  print(queue[i])  
+    for i = front; i <= rear; i++
+        print(queue[i])  
 ```
 
 |Index|0|1|2|3|4|
@@ -76,16 +77,16 @@ else
 ### 4. isEmpty()
 ```
 if front == -1 OR front > rear
- return true
+    return true
 else
- return false
+    return false
 ```
 
 - `front == -1`
 
 |Index _-1_|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack|||||
+|Queue|||||
 |:point_up_2:|
 |_front_|
 
@@ -93,9 +94,9 @@ else
 ### 5. isFull()
 ```
 if rear == MAX - 1
- return true
+    return true
 else 
- return false
+    return false
 ```
 
 - `MAX = 5`
@@ -103,7 +104,7 @@ else
 
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
-|Stack|12|13|22|35|45|
+|Queue|12|13|22|35|45|
 ||:point_up_2:||||:point_up_2:|
 ||_front_||||_rear_|
 
@@ -126,11 +127,14 @@ else
 ```
 if isFull()
     print("Overflow");
+    
 else
     if isEmpty()
         front = rear = 0;
+        
     else if rear == MAX - 1 && front != 0
-        rear = 0;    
+        rear = 0;
+            
     else 
         rear = (rear + 1);
             
@@ -169,12 +173,16 @@ else
 ```
 if isEmpty()
     print("Underflow");
+    
 else
     val = queue[front];
+    
     if front == rear
         front = rear = -1;
+        
     else if (front == MAX - 1)
-        front = 0;    
+        front = 0;
+            
     else
         front = (front + 1);
 ```
@@ -209,10 +217,12 @@ else
 ```
 if (isEmpty()){
     print("Underflow");
+    
 else
     if rear >= front
         for int i=front; i <= rear; i++
-            print queue[i]        
+            print queue[i]
+                    
     else
         for int i = front; i < MAX; i++
             print queue[i]        
@@ -286,7 +296,7 @@ else
 ```
 if (front == 0 && rear == MAX -1) ||
    (rear == (front - 1) % (MAX - 1))
-    return true;
+    return true;    
 else 
     return false;
 ```
