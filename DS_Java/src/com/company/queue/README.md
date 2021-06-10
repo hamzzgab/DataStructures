@@ -123,6 +123,21 @@ else
 ## Functions
 ### 1. enqueue(val)
 
+```
+if isFull()
+    print("Overflow");
+else
+    if isEmpty()
+        front = rear = 0;
+    else if rear == MAX - 1 && front != 0
+        rear = 0;    
+    else 
+        rear = (rear + 1);
+            
+    queue[rear] = val;
+```
+
+
 - `front = 0`
 - `rear = 3`
 
@@ -151,6 +166,19 @@ else
 
 ### 2. dequeue()
 
+```
+if isEmpty()
+    print("Underflow");
+else
+    val = queue[front];
+    if front == rear
+        front = rear = -1;
+    else if (front == MAX - 1)
+        front = 0;    
+    else
+        front = (front + 1);
+```
+
 - `front = 0`
 - `rear = 3`
 
@@ -177,6 +205,20 @@ else
  | ||Q[4] | ||
 
 ### 3. display()
+
+```
+if (isEmpty()){
+    print("Underflow");
+else
+    if rear >= front
+        for int i=front; i <= rear; i++
+            print queue[i]        
+    else
+        for int i = front; i < MAX; i++
+            print queue[i]        
+        for int i = 0; i <= rear; i++
+            print queue[i]
+```
 
 1. `rear >= front`
 
@@ -223,6 +265,13 @@ else
 
 ### 4. isEmpty()
 
+```
+if front == -1 && rear == -1
+    return true;
+else 
+    return false;
+```
+
 |||Q[0]|||
 |---|---|---|---|---|
 ||:point_right:||:point_down:||
@@ -233,6 +282,14 @@ else
 |||Q[4]|||
 
 ### 5. isFull()
+
+```
+if (front == 0 && rear == MAX -1) ||
+   (rear == (front - 1) % (MAX - 1))
+    return true;
+else 
+    return false;
+```
 
 |||Q[0]|||
 |---|---|---|---|---|
