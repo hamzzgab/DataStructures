@@ -16,7 +16,8 @@ else
         front = rear = 0
         
     else 
-        rear++        
+        rear++
+                
     queue[rear] = val
 ```
 
@@ -38,6 +39,7 @@ else
 ```
 if isEmpty()
     print Underflow
+    
 else 
     popped_val = queue[front]
     front++
@@ -62,6 +64,7 @@ else
 ```
 if isEmpty()
     print Underflow
+    
 else
     for i = front; i <= rear; i++
         print(queue[i])  
@@ -78,6 +81,7 @@ else
 ```
 if front == -1 OR front > rear
     return true
+    
 else
     return false
 ```
@@ -95,6 +99,7 @@ else
 ```
 if rear == MAX - 1
     return true
+    
 else 
     return false
 ```
@@ -117,7 +122,7 @@ else
 
 ## Variables
 - `MAX`  a variable to declare the final size of the queue
-- `front` decalres the starting element in the queue (initialized to  _-1_)
+- `front` declares the starting element in the queue (initialized to  _-1_)
 - `rear` declares the last element in the queue (initialized to  _-1_)
 - `queue` to store the values
 
@@ -225,7 +230,8 @@ else
                     
     else
         for int i = front; i < MAX; i++
-            print queue[i]        
+            print queue[i]      
+              
         for int i = 0; i <= rear; i++
             print queue[i]
 ```
@@ -278,6 +284,7 @@ else
 ```
 if front == -1 && rear == -1
     return true;
+    
 else 
     return false;
 ```

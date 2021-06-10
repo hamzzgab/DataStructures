@@ -9,6 +9,7 @@
 ```
 if isFull()
     print Overflow
+    
 else 
     top++
     stack[top] = val
@@ -30,6 +31,7 @@ else
 ```
 if isEmpty()
     print Underflow
+    
 else 
     popped_val = stack[top]
     top--		
@@ -51,6 +53,7 @@ else
 ```
 if isEmpty()
     print Underflow
+    
 else 
     return stack[top]
 ```
@@ -66,6 +69,7 @@ else
 ```
 if isEmpty()
     print Underflow
+    
 else 
     for i = 0; i<= top; i++
         print stack[i]
@@ -80,6 +84,7 @@ else
 ```
 if top == MAX - 1
     return true
+    
 else 
     return false
 ```
@@ -96,6 +101,7 @@ else
 ```
 if top == -1
     return true
+    
 else 
     return false
 ```
