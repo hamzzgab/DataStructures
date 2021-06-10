@@ -6,7 +6,7 @@ public class CircularQueue {
     int val;
     final int MAX = 5;
     int front = -1, rear = -1;
-    int[] queue = new int[100];
+    int[] queue = new int[MAX];
 
     CircularQueue(){
         front = -1;
@@ -27,7 +27,7 @@ public class CircularQueue {
                 rear = 0;
             }
             else {
-                rear = (rear + 1) % MAX;
+                rear = (rear + 1);
             }
             queue[rear] = val;
         }
@@ -39,25 +39,33 @@ public class CircularQueue {
             print("Underflow");
         }else {
             val = queue[front];
-            if (front == rear){
+            if (front == rear) {
                 front = rear = -1;
+            } else if (front == MAX - 1) {
+                front = 0;
             }
             else{
-                front = (front + 1) % MAX;
+                front = (front + 1);
             }
         }
         display();
     }
 
     void display(){
-        int i=front;
         if (isEmpty()){
             print("Underflow");
         }else{
-            System.out.print("\n");
-            while (i != rear){
-                System.out.println(queue[i]);
-                i = (i + 1) % MAX;
+            if (rear >= front){
+                for (int i=front; i <= rear; i++){
+                    System.out.println("[" + i + "] - " + queue[i]);
+                }
+            }else{
+                for (int i = front; i < MAX; i++){
+                    System.out.println("[" + i + "] - " + queue[i]);
+                }
+                for (int i = 0; i <= rear; i++){
+                    System.out.println("[" + i + "] - " + queue[i]);
+                }
             }
         }
     }
@@ -69,7 +77,8 @@ public class CircularQueue {
     }
 
     boolean isFull(){
-        if ((rear + 1) % MAX == front){
+        if ((front == 0 && rear == MAX -1) ||
+                (rear == (front - 1) % (MAX - 1))) {
             return true;
         }else return false;
     }
@@ -79,7 +88,7 @@ public class CircularQueue {
         Scanner sc = new Scanner(System.in);
         CircularQueue q = new CircularQueue();
 
-        System.out.println("1. Enqueue\n2. Dequeue\n3. Display\n4. Exit");
+        System.out.print("1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
         while(choice != 4){
             choice = sc.nextInt();
             switch (choice){
