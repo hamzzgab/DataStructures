@@ -4,7 +4,7 @@
 - `top` decalres the top most element in the stack (initialized to  _-1_)
 - `stack` to store the values
 
-## Functions 🥳
+## Functions
 ### 1. push(val)
 ```
 if isFull()
