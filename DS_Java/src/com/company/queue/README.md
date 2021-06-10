@@ -5,7 +5,7 @@
 - `rear` declares the last element in the queue (initialized to  _-1_)
 - `queue` to store the values
 
-## Functions 🥳
+## Functions
 ### 1. enqueue(val)
 ```
 if isFull()
