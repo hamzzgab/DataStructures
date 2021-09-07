@@ -4,7 +4,7 @@ Click on the links to redirect you to the `README.md` for insight into the DS
 
 ### 1. [Stack 🗄️ (LIFO)](https://github.com/flyingtatta/DataStructures/blob/main/README.md#stack-%EF%B8%8F-lifo)
 ### 2. [Linear Queue 🧑‍🤝‍🧑 (FIFO)](https://github.com/flyingtatta/DataStructures/blob/main/README.md#linear-queue--fifo)
-### 3. [Circular Queue 👌 (FIFO)](https://github.com/flyingtatta/DataStructures/blob/main/DS_Java/src/com/company/queue/README.md#cicular-queue-)
+### 3. [Circular Queue 👌 (FIFO)](https://github.com/flyingtatta/DataStructures/blob/main/README.md#cicular-queue-)
 
 # Stack 🗄️ (LIFO)
 ## Variables to be declared
