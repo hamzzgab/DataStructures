@@ -1,5 +1,5 @@
 # DataStructures :🗃️
- 
+
 Click on the links to redirect you to the `README.md` for insight into the DS
 
 ### 1. [Stack 🗄️ (LIFO)](https://github.com/flyingtatta/DataStructures/blob/main/README.md#stack-%EF%B8%8F-lifo)
@@ -17,8 +17,8 @@ Click on the links to redirect you to the `README.md` for insight into the DS
 ```
 if isFull()
     print Overflow
-    
-else 
+
+else
     top++
     stack[top] = val
 ```
@@ -33,14 +33,14 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|22|35|
-|top||||:point_up:|
+|top||||☝️|
 
 ### 2. pop()
 ```
 if isEmpty()
     print Underflow
-    
-else 
+
+else
     popped_val = stack[top]
     top--		
 ```
@@ -55,14 +55,14 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|
-|top||:point_up_2:|
+|top||☝️|
 
 ### 3. peek()
 ```
 if isEmpty()
     print Underflow
-    
-else 
+
+else
     return stack[top]
 ```
 
@@ -71,14 +71,14 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|22|
-|top|||:point_up_2:|
+|top|||☝️|
 
 ### 4. display()
 ```
 if isEmpty()
     print Underflow
-    
-else 
+
+else
     for i = 0; i<= top; i++
         print stack[i]
 ```
@@ -86,14 +86,14 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|22|35|78|
-|top|||||:point_up_2:|
+|top|||||☝️|
 
 ### 5. isFull()
 ```
 if top == MAX - 1
     return true
-    
-else 
+
+else
     return false
 ```
 
@@ -103,14 +103,14 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|22|35|78|
-|top|||||:point_up_2:|
+|top|||||☝️|
 
 ### 6. isEmpty()
 ```
 if top == -1
     return true
-    
-else 
+
+else
     return false
 ```
 
@@ -119,7 +119,7 @@ else
 |Index _-1_|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack||||||
-|top :point_up_2:||||||
+|top ☝️||||||
 
 # Linear Queue 🧑‍🤝‍🧑 (FIFO)
 ## Variables to be declared
@@ -137,10 +137,10 @@ if isFull()
 else  
     if front == -1 AND rear == -1
         front = rear = 0
-        
-    else 
+
+    else
         rear++
-                
+
     queue[rear] = val
 ```
 
@@ -155,15 +155,15 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Queue|12|13|22|35|
-||:point_up_2:|||:point_up_2:|
+||☝️|||☝️|
 ||_front_|||_rear_|
 
 ### 2. dequeue()
 ```
 if isEmpty()
     print Underflow
-    
-else 
+
+else
     popped_val = queue[front]
     front++
 ```
@@ -179,7 +179,7 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Queue||13|22|
-|||:point_up_2:|:point_up_2:|
+|||☝️|☝️|
 |||_front_|_rear_|
 
 
@@ -187,7 +187,7 @@ else
 ```
 if isEmpty()
     print Underflow
-    
+
 else
     for i = front; i <= rear; i++
         print(queue[i])  
@@ -196,7 +196,7 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Stack|12|13|22|35|45|
-||:point_up_2:||||:point_up_2:|
+||☝️||||☝️|
 ||_front_||||_rear_|
 
 
@@ -204,7 +204,7 @@ else
 ```
 if front == -1 OR front > rear
     return true
-    
+
 else
     return false
 ```
@@ -214,7 +214,7 @@ else
 |Index _-1_|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Queue|||||
-|:point_up_2:|
+|☝️|
 |_front_|
 
 
@@ -222,8 +222,8 @@ else
 ```
 if rear == MAX - 1
     return true
-    
-else 
+
+else
     return false
 ```
 
@@ -233,7 +233,7 @@ else
 |Index|0|1|2|3|4|
 |---|---|---|---|---|---|
 |Queue|12|13|22|35|45|
-||:point_up_2:||||:point_up_2:|
+||☝️||||☝️|
 ||_front_||||_rear_|
 
 
@@ -255,17 +255,17 @@ else
 ```
 if isFull()
     print("Overflow");
-    
+
 else
     if isEmpty()
         front = rear = 0;
-        
+
     else if rear == MAX - 1 && front != 0
         rear = 0;
-            
-    else 
+
+    else
         rear = (rear + 1);
-            
+
     queue[rear] = val;
 ```
 
@@ -279,7 +279,7 @@ else
 |Q[7] | ||20|Q[1]|
 |Q[6] | ||30|Q[2]|
 |Q[5] | ||40|Q[3]|
- ||:point_up: ||:point_left: ||
+ ||☝️ ||:point_left: ||
  | ||Q[4] | ||
 
 - After enqueuing `val = 50`
@@ -292,7 +292,7 @@ else
 |Q[7] | ||20|Q[1]|
 |Q[6] | ||30|Q[2]|
 |Q[5] | ||40|Q[3]|
- ||:point_up:|50|:point_left: ||
+ ||☝️|50|:point_left: ||
  | ||Q[4] | ||
 
 
@@ -301,16 +301,16 @@ else
 ```
 if isEmpty()
     print("Underflow");
-    
+
 else
     val = queue[front];
-    
+
     if front == rear
         front = rear = -1;
-        
+
     else if (front == MAX - 1)
         front = 0;
-            
+
     else
         front = (front + 1);
 ```
@@ -324,7 +324,7 @@ else
 |Q[7] | ||20|Q[1]|
 |Q[6] | ||30|Q[2]|
 |Q[5] | ||40|Q[3]|
- ||:point_up: ||:point_left: ||
+ ||☝️ ||:point_left: ||
  | ||Q[4] | ||
 
 - After de-queuing
@@ -337,7 +337,7 @@ else
 |Q[7] | ||20|Q[1]|
 |Q[6] | ||30|Q[2]|
 |Q[5] | ||40|Q[3]|
- ||:point_up: ||:point_left: ||
+ ||☝️ ||:point_left: ||
  | ||Q[4] | ||
 
 ### 3. display()
@@ -345,16 +345,16 @@ else
 ```
 if (isEmpty()){
     print("Underflow");
-    
+
 else
     if rear >= front
         for int i=front; i <= rear; i++
             print queue[i]
-                    
+
     else
         for int i = front; i < MAX; i++
             print queue[i]      
-              
+
         for int i = 0; i <= rear; i++
             print queue[i]
 ```
@@ -362,7 +362,7 @@ else
 1. `rear >= front`
 
 - `rear = 7`
-- `front = 0` 
+- `front = 0`
 
  | ||Q[0] | ||
 |---|---|---|---|---|
@@ -370,7 +370,7 @@ else
 |Q[7]|80 ||20|Q[1]|
 |Q[6]|70 ||30|Q[2]|
 |Q[5]|60 ||40|Q[3]|
- ||:point_up:|50|:point_left: ||
+ ||☝️|50|:point_left: ||
  | ||Q[4] | ||
 
 - `rear = 0`
@@ -382,7 +382,7 @@ else
 |Q[7] ||||Q[1]|
 |Q[6] ||||Q[2]|
 |Q[5] ||||Q[3]|
- ||:point_up: ||:point_left: ||
+ ||☝️ ||:point_left: ||
  | ||Q[4] | ||
 
 2. `else`
@@ -397,7 +397,7 @@ else
 |Q[7]|15 ||20|Q[1]|
 |Q[6]|25 ||30|Q[2]|
 |Q[5] ||- ||Q[3]|
- ||:point_up: ||:point_left: ||
+ ||☝️ ||:point_left: ||
  | ||Q[4] | ||
 
 
@@ -407,8 +407,8 @@ else
 ```
 if front == -1 && rear == -1
     return true;
-    
-else 
+
+else
     return false;
 ```
 
@@ -418,7 +418,7 @@ else
 |Q[7]||||Q[1]|
 |Q[6]||||Q[2]|
 |Q[5]||||Q[3]|
-||:point_up:||:point_left:||
+||☝️||:point_left:||
 |||Q[4]|||
 
 ### 5. isFull()
@@ -427,7 +427,7 @@ else
 if (front == 0 && rear == MAX -1) ||
    (rear == (front - 1) % (MAX - 1))
     return true;    
-else 
+else
     return false;
 ```
 
@@ -437,5 +437,5 @@ else
 |Q[7]|80||20|Q[1]|
 |Q[6]|70||30|Q[2]|
 |Q[5]|60||40|Q[3]|
-||:point_up:|50|:point_left:||
+||☝️|50|:point_left:||
 |||Q[4]|||
